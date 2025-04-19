@@ -1,0 +1,6 @@
+
+enum ServerPermission {
+  SERVER_BAN_USER
+  CREATE_COMMUNITY
+  MANAGE_SYSTEM
+}

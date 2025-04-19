@@ -1,0 +1,15 @@
+// prisma/models/role.prisma
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  name        String
+  isGlobal    Boolean  @default(false)
+  communityId Int?
+
+  serverPermissions    RoleServerPermission[]
+  communityPermissions RoleCommunityPermission[]
+  textChannelPermissions RoleTextChannelPermission[]
+  voiceChannelPermissions RoleVoiceChannelPermission[]
+
+  assignments RoleAssignment[]
+}
